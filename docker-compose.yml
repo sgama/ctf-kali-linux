@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+    kali:
+        image: docker.pkg.github.com/sgama/ctf-kali-linux/vnc:latest
+        container_name: kali
+        restart: unless-stopped
+        ports:
+            - 6080:6080
