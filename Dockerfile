@@ -16,6 +16,7 @@ path-include /usr/share/locale/en*' > /etc/dpkg/dpkg.cfg.d/01_nodoc && \
     echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 
 RUN apt-get -yqq update && \
+    apt-get -y dist-upgrade -yqq && \
     apt-get install -y \
     kali-desktop-xfce xvfb x11vnc kali-linux-full \
     python python-numpy \
